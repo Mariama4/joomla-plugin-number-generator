@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.9" type="plugin" group="system" method="upgrade">
+    <name>plg_system_numbergenerator</name>
+    <author>Georgy Taskabulov</author>
+    <creationDate>02.03.2023</creationDate>
+    <version>1.0.0</version>
+    <description>Генерация чисел при помощи шорткода {number=min-max-id}</description>
+    <files>
+        <filename plugin="numbergenerator">numbergenerator.php</filename>
+        <folder>sql</folder>
+    </files>
+    <install> 
+        <sql> 
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file> 
+        </sql> 
+    </install> 
+    <uninstall>
+        <sql> 
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file> 
+        </sql> 
+    </uninstall>
+</extension>
